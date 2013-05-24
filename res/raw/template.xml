@@ -46,7 +46,7 @@
             </item>
         </items>
     </pageItem>
-    <pageItem type="swrcfe:Project" class="eu.deustotech.internet.linkedtagworld.model.Project">
+    <pageItem type="swrcfe:Project" class="eu.deustotech.internet.morelabapp.model.Project">
         <items>
             <item id="description">
                 <property>dc:description</property>
@@ -65,7 +65,7 @@
             </item>
         </items>
     </pageItem>
-    <pageItem type="swrcfe:FundingAmount" class="eu.deustotech.internet.linkedtagworld.model.Funding">
+    <pageItem type="swrcfe:FundingAmount" class="eu.deustotech.internet.morelabapp.model.Funding">
         <items>
             <item id="label">
                 <propert>rdfs:type</propert>
@@ -78,7 +78,7 @@
 	        </item>
         </items>
     </pageItem>
-    <pageItem type="swrcfe:Organization" class="eu.deustotech.internet.linkedtagworld.model.Organization">
+    <pageItem type="swrcfe:Organization" class="eu.deustotech.internet.morelabapp.model.Organization">
         <items>
             <item id="name" main="true">
                 <property>swrcfe:hasOrganizationName</property>
