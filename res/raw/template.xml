@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <prefixes>
+        <prefixItem>
+            <prefix>foaf</prefix>
+            <uri>http://xmlns.com/foaf/0.1/</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>rel</prefix>
+            <uri>http://purl.org/vocab/relationship/</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>rdf</prefix>
+            <uri>http://www.w3.org/2000/01/rdf-schema#</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>sioc</prefix>
+            <uri>http://rdfs.org/sioc/ns#</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>swrcfe</prefix>
+            <uri>http://www.morelab.deusto.es/ontologies/swrcfe.owl#</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>dc</prefix>
+            <uri>http://purl.org/dc/elements/1.1/</uri>
+        </prefixItem>
+        <prefixItem>
+            <prefix>rdfs</prefix>
+            <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#</uri>
+        </prefixItem>
+    </prefixes>
+    <pageItem type="foaf:Person" class="eu.deustotech.internet.linkedtagworld.model.Person">
+        <items>
+            <item id="depiction">
+                <property>foaf:depiction</property>
+            </item>
+            <item id="name" main="true">
+                <property>foaf:name</property>
+            </item>
+            <item id="email">
+                <property>foaf:mbox</property>
+            </item>
+            <item id="workmates" linkable="true">
+                <property>rel:worksWith</property>
+            </item>
+        </items>
+    </pageItem>
+    <pageItem type="swrcfe:Project" class="eu.deustotech.internet.linkedtagworld.model.Project">
+        <items>
+            <item id="description">
+                <property>dc:description</property>
+            </item>
+            <item id="title" main="true">
+                <property>dc:title</property>
+            </item>
+            <item id="logo">
+                <property>swrcfe:hasProjectLogo</property>
+            </item>
+            <item id="funding" linkable="true">
+                <property>swrcfe:hasFundingAmount</property>
+            </item>
+            <item id="members" linkable="true">
+                <property>swrcfe:hasConsortiumMember</property>
+            </item>
+        </items>
+    </pageItem>
+    <pageItem type="swrcfe:FundingAmount" class="eu.deustotech.internet.linkedtagworld.model.Funding">
+        <items>
+            <item id="label">
+                <propert>rdfs:type</propert>
+            </item>
+	        <item id="year" main="true">
+	            <property>swrcfe:hasYear</property>
+	        </item>
+	        <item id="amount">
+	           <property>swrcfe:hasAmount</property>
+	        </item>
+        </items>
+    </pageItem>
+    <pageItem type="swrcfe:Organization" class="eu.deustotech.internet.linkedtagworld.model.Organization">
+        <items>
+            <item id="name" main="true">
+                <property>swrcfe:hasOrganizationName</property>
+            </item>
+        </items>
+    </pageItem>
+</template>
