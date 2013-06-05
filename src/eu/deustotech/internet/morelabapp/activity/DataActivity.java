@@ -20,7 +20,7 @@ public class DataActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LinkedTagWorld ltw = new LinkedTagWorld(getApplicationContext(), this, getResources().openRawResource(R.raw.template));
+        LinkedTagWorld ltw = new LinkedTagWorld(getApplicationContext(), this, getResources().openRawResource(R.raw.lqr));
         try {
 			ltw.renderData(getIntent().getStringExtra("URI"));
 		} catch (ParserConfigurationException e) {

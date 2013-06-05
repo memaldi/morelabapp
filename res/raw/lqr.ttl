@@ -1,0 +1,83 @@
+@prefix ltw: <http://helheim.deusto.es/ltw/0.1#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix swrcfe: <http://www.morelab.deusto.es/ontologies/swrcfe.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<#PersonMap> a ltw:ClassItem;
+    ltw:javaClass "eu.deustotech.internet.linkedtagworld.model.Person";
+    ltw:ontologyClass foaf:Person;
+    ltw:hasPropertyItem [
+        ltw:identifier "depiction";
+        ltw:ontologyProperty foaf:depiction;
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "name";
+        ltw:ontologyProperty foaf:name;
+        ltw:isMain "true";
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "email";
+        ltw:ontologyProperty foaf:mbox;
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "workmates";
+        ltw:ontologyProperty rel:worksWith;
+        ltw:isClickable "true";
+    ].
+
+<#ProjectMap> a ltw:ClassItem;
+    ltw:javaClass "eu.deustotech.internet.morelabapp.model.Project";
+    ltw:ontologyClass swrcfe:Project;
+    ltw:hasPropertyItem [
+        ltw:identifier "description";
+        ltw:ontologyProperty dc:description;
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "title";
+        ltw:ontologyProperty dc:title;
+        ltw:isMain "true";
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "logo";
+        ltw:ontologyProperty swrcfe:hasProjectLogo;
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "funding";
+        ltw:ontologyProperty swrcfe:hasFundingAmount;
+        ltw:isClickable "true";
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "members";
+        ltw:ontologyProperty swrcfe:hasConsortiumMember;
+        ltw:isClickable "true";
+    ].
+
+<#FundingAmountMap> a ltw:ClassItem;
+    ltw:javaClass "eu.deustotech.internet.morelabapp.model.Funding";
+    ltw:ontologyClass swrcfe:FundingAmount;
+    ltw:hasPropertyItem [
+        ltw:identifier "label";
+        ltw:ontologyProperty rdfs:label;
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "year";
+        ltw:ontologyProperty swrcfe:hasYear;
+        ltw:isMain "true";
+    ];
+    ltw:hasPropertyItem [
+        ltw:identifier "amount";
+        ltw:ontologyProperty swrcfe:hasAmount;
+    ].
+
+<#OrganizationMap> a ltw:ClassItem;
+    ltw:javaClass "eu.deustotech.internet.morelabapp.model.Organization";
+    ltw:ontologyClass swrcfe:Organization;
+    ltw:hasPropertyItem [
+        ltw:identifier "name";
+        ltw:ontologyProperty swrcfe:hasOrganizationName;
+        ltw:isMain "true";
+    ].
