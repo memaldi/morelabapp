@@ -8,7 +8,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 <#PersonMap> a ltw:ClassItem;
-    ltw:javaClass "eu.deustotech.internet.linkedtagworld.model.Person";
+    ltw:javaClass "eu.deustotech.internet.morelabapp.model.Person";
     ltw:ontologyClass foaf:Person;
     ltw:hasPropertyItem [
         ltw:identifier "depiction";
