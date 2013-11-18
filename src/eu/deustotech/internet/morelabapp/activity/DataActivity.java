@@ -20,9 +20,12 @@ public class DataActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Create LinkedTagWorld instance with appropriate parameters. 
         LinkedTagWorld ltw = new LinkedTagWorld(getApplicationContext(), this, getResources().openRawResource(R.raw.lqr));
         try {
-			ltw.renderData(getIntent().getStringExtra("URI"));
+        	String lang = "";
+        	// We render the data from given RDF URI.
+			ltw.renderData(getIntent().getStringExtra("URI"), lang);
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -9,6 +9,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/depiction" android:layout_gravity="center"/>
+    
+    <!-- We use masks like %s to fullfill the gaps with RDF data from the QR Codes  -->
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

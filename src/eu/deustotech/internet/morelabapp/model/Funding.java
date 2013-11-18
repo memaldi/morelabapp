@@ -10,13 +10,13 @@ public class Funding implements Layout {
 
 	@Override
 	public int getLayout() {
-		// TODO Auto-generated method stub
+		// We return the layout which renders entities of type Layout
 		return R.layout.funding_activity;
 	}
 
 	@Override
 	public Map<String, Integer> getWidgets() {
-		// TODO Auto-generated method stub
+		// We create a widgetMap pairing the id of properties and their widgets in layout.
 		Map<String, Integer> widgetMap = new HashMap<String, Integer>();
 		widgetMap.put("year", R.id.textView_funding);
 		widgetMap.put("amount", R.id.amount);
